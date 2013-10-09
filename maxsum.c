@@ -47,7 +47,7 @@ void Fvh(int v,int h)
 	for(i=0;i<mm;i++)
 	for(j=0;j<nn;j++){
 		aa[i][j]=a[i%m][j%n];
-		l[j][k]=f[i][j]=g[i][j]=0;
+		l[i][j]=f[i][j]=g[i][j]=0;
 	}
 	
 	s=a[0][0];
@@ -58,11 +58,7 @@ void Fvh(int v,int h)
 		for(j=1;j<nn;j++) g[i][j]=g[i][j-1]+aa[i][j];
 	}
 	
-<<<<<<< HEAD
-	
-	
-=======
->>>>>>> new-01
+
 	for(i=0;i<mm;i++)
 	for(j=0;j<nn;j++)
 	for(k=j,nx=0;k<nn;k++,nx++){
